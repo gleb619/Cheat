@@ -1,0 +1,119 @@
+body {
+  padding-top: 70px;
+  padding-bottom: 30px;
+  overflow-x: hidden;
+}
+
+.theme-dropdown .dropdown-menu {
+  position: static;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.theme-showcase > p > .btn {
+  margin: 5px 0;
+}
+
+.theme-showcase .navbar .container {
+  width: auto;
+}
+
+.questtion-box{
+
+-webkit-box-shadow: 0 4px 4px -2px #000000;
+   -moz-box-shadow: 0 4px 4px -2px #000000;
+        box-shadow: 0 4px 4px -2px #000000;
+		padding: 10px;
+		/* margin: 25px; */
+	
+}
+
+.content-box {
+	margin: 0 auto;
+	position: relative; /* So we can position the banner within the box */
+	border: 5px solid white;
+	box-shadow: 0 0 10px rgba(0,0,0,.3);
+	-moz-box-shadow: 0 0 10px rgba(0,0,0,.3);
+	-webkit-box-shadow: 0 0 10px rgba(0,0,0,.3);
+}
+
+.ribbon-container {
+	position: absolute;
+	top: 5px;
+	right: -20px;
+	overflow: visible; /* so we can see the pseudo-elements we're going to add to the anchor */
+	font-size: 11px; /* font-size and line-height must be equal so we can account for the height of the banner */
+	line-height: 11px;
+}
+
+.ribbon-container:before {
+	content:"";
+	height: 0;
+	width: 0;
+	display: block;
+	position: absolute;
+	top: 3px;
+	left: 0;
+	border-top: 19px solid rgba(0,0,0,.3); /* These 4 border properties create the first part of our drop-shadow */
+	border-bottom: 19px solid rgba(0,0,0,.3); 
+	border-right: 19px solid rgba(0,0,0,.3);
+	border-left: 19px solid transparent;
+}
+
+.ribbon-container:after { /* This adds the second part of our dropshadow */
+	content:"";
+	height: 3px;
+	background: rgba(0,0,0,.3);
+	display: block;
+	position: absolute;
+	bottom: -3px;
+	left: 36px;
+	right:3px;
+}
+
+.ribbon-container a {
+	display:block;
+	padding:15px;
+	position:relative; /* allows us to position our pseudo-elements properly */
+	background:#0089d0;
+	overflow:visible;
+	height:38px;
+	margin-left:19px;
+	color:#fff;
+	text-decoration:none;
+}
+
+.ribbon-container a:after { /* this creates the "folded" part of our ribbon */
+	content:""; 
+	height: 0;
+	width: 0;
+	display:block;
+	position:absolute;
+	bottom:-5px;
+	right:0;
+	border-top: 5px solid #004a70; 
+	border-right: 5px solid transparent;
+}
+
+.ribbon-container a:before { /* this creates the "forked" part of our ribbon */
+	content:"";
+	height: 0;
+	width: 0;
+	display:block;
+	position:absolute;
+	top:0;
+	left:-19px;
+	border-top: 19px solid #0089d0; 
+	border-bottom: 19px solid #0089d0; 
+	border-right: 19px solid transparent;
+	border-left: 19px solid transparent;
+}
+
+.ribbon-container a:hover {
+	/* background:#009ff1; */
+}
+
+.ribbon-container a:hover:before { /* this makes sure that the "forked" part of the ribbon changes color with the anchor on :hover */
+	/* border-top: 19px solid #009ff1;  */
+	/* border-bottom: 19px solid #009ff1; */
+}
